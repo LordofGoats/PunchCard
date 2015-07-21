@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <setParameter name="IIS Web Application Name" value="Default Web Site/" />
-  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Timeclock-20150706092205.mdf;Initial Catalog=aspnet-Timeclock-20150706092205;Integrated Security=True" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=punchcard.cxxqpryh29cx.us-east-1.rds.amazonaws.com,1433;Initial Catalog=punchcard;User ID=punchcard;Password=punchcard" />
 </parameters>

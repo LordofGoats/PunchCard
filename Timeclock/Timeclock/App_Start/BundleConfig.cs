@@ -21,13 +21,40 @@ namespace Timeclock
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/jquery.blockui.js",
+                      "~/Scripts/jquery.cookie.js",
+                      "~/Scripts/jquery-ui-1.9.2.custom.min.js",
+                      "~/Scripts/slimScroll.min.js",
+                      "~/Scripts/jquery-1.8.2.min.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/calendar").Include(
+                    "~/Scripts/fullcalendar.min.js",
+                    "~/Scripts/jquery.uniform.min.js",
+                    "~/Scripts/chosen.jquery.min.js",
+                    "~/Scripts/jquery.fancybox.pack.js"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/custom-styles.css",
-                      "~/Content/font-awesome.css"));
+                      "~/Content/bootstrap-responsive.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-responsive.min.css",
+                      "~/Content/bootstrap-fileupload.css",
+                      "~/Content/uniform.default.css",
+                      "~/Content/style_responsive.css",
+                      "~/Content/style.css",
+                      "~/Content/style_default.css",
+                      "~/Content/chosen.css",
+                      "~/Content/jquery.fancybox.css"
+                      
+                      ));
+
+            bundles.Add(new StyleBundle("~/Content/Calendar/css").Include(
+                    "~/Content/Calendar/bootstrap-fullcalendar.css"
+                ));
         }
     }
 }

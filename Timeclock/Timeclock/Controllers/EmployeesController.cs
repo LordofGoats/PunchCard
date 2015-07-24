@@ -20,6 +20,10 @@ namespace Timeclock.Controllers
             return View();
         }
 
+        public ActionResult Schedule()
+        {
+            return View();
+        }
         // GET: Employees/Details/5
         public ActionResult Details(string id)
         {

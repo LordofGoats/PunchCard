@@ -20,7 +20,7 @@ namespace Timeclock
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/jquery.blockui.js",
                       "~/Scripts/jquery.cookie.js",
@@ -33,28 +33,29 @@ namespace Timeclock
                     "~/Scripts/fullcalendar.min.js",
                     "~/Scripts/jquery.uniform.min.js",
                     "~/Scripts/chosen.jquery.min.js",
-                    "~/Scripts/jquery.fancybox.pack.js"
+                    "~/Scripts/jquery.fancybox.pack.js",
+                    "~/Scripts/app.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/bootstrap-responsive.css",
-                      "~/Content/bootstrap.min.css",
-                      "~/Content/bootstrap-responsive.min.css",
-                      "~/Content/bootstrap-fileupload.css",
-                      "~/Content/uniform.default.css",
-                      "~/Content/style_responsive.css",
-                      "~/Content/style.css",
-                      "~/Content/style_default.css",
-                      "~/Content/chosen.css",
-                      "~/Content/jquery.fancybox.css"
-                      
+                    "~/Content/bootstrap.min.css",
+                    "~/Content/bootstrap-responsive.css",
+                    "~/Content/Calendar/bootstrap-fullcalendar.css",
+                    "~/Content/bootstrap.css",
+                    "~/Content/site.css",
+                    "~/Content/style.css",
+                    "~/Content/style_responsive.css",
+                    "~/Content/style_default.css",
+                    "~/Content/chosen.css",
+                    "~/Content/uniform.default.css",
+                    "~/Content/jquery.fancybox.css"                      
+                      //"~/Content/bootstrap-responsive.min.css",
+                      //"~/Content/bootstrap-fileupload.css",
                       ));
 
-            bundles.Add(new StyleBundle("~/Content/Calendar/css").Include(
-                    "~/Content/Calendar/bootstrap-fullcalendar.css"
-                ));
+            //bundles.Add(new StyleBundle("~/Content/Calendar/css").Include(
+                    
+            //    ));
         }
     }
 }

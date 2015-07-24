@@ -59,7 +59,7 @@
                             <i class="icon-home"></i>
                             <a href="@Url.Action("Index", "Home")">Home</a> <span class="divider">/</span>
                         </li>
-                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Schedule</a></li>
                     </ul>
                     <!-- END PAGE TITLE & BREADCRUMB-->
                 </div>
@@ -72,7 +72,7 @@
                         <!-- BEGIN CALENDAR PORTLET-->
                         <div class="widget">
                             <div class="widget-title">
-                                <h4><i class="icon-reorder"></i>Calendar</h4>
+                                <h4><i class="icon-reorder"></i>Schedule for @DateTime.UtcNow.Month</h4>
                                 <span class="tools">
                                     <a href="#widget-config" data-toggle="modal" class="icon-wrench"></a>
                                     <a href="javascript:;" class="icon-refresh"></a>
@@ -86,13 +86,13 @@
                                         <div id="external-events">
                                             <form class="inline-form">
                                                 <input type="text" value="" class="span12" placeholder="Event Title..." id="event_title" /><br />
-                                                <select id="event_priority" data-placeholder="Select Label..." class="span12 chosen">
+                                                <select id="event_priority" data-placeholder="Select color..." class="span12 chosen">
                                                     <option value=""></option>
-                                                    <option value="default">Default</option>
-                                                    <option value="success">Normal</option>
-                                                    <option value="info">Medium</option>
-                                                    <option value="warning">Urgent</option>
-                                                    <option value="important">Important</option>
+                                                    <option value="default">Grey</option>
+                                                    <option value="success">Green</option>
+                                                    <option value="info">Blue</option>
+                                                    <option value="warning">Yellow</option>
+                                                    <option value="important">Red</option>
                                                 </select>
                                                 <div class="space12"></div>
                                                 <a href="javascript:;" id="event_add" class="btn">Add Event</a>
@@ -121,5 +121,12 @@
         </div>
         <!-- END PAGE CONTAINER-->
         @Scripts.Render("~/bundles/calendar")
+        <script>
+            jquery(document).ready(function () {
+                App.init();
+            });
+            
+            
+        </script>
     </div>
 <!-- END PAGE -->

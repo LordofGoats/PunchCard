@@ -4,24 +4,30 @@
     ViewBag.Title = "Hours";
 }
 
-<h2>Index</h2>
+<div id="page">
+    <div class="container-fluid">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th></th>
-    </tr>
+        <h2>Index</h2>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.hours }) |
-            @Html.ActionLink("Details", "Details", new { id=item.hours }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.hours })
-        </td>
-    </tr>
-}
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th></th>
+            </tr>
 
-</table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.hours }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.hours }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.hours })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

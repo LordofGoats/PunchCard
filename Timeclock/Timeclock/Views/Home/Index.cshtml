@@ -1,43 +1,48 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<!--Begin page header-->
-<div class="row-fluid">
-    <div class="span12">
-        <h3 class="page-title">PunchCard <small>Welcome, ! Click on the buttons to your left to get started!</small></h3>
-    </div>
-</div>
-<!--End page header-->
-<div id="page" class="dashboard">
-    <div class="row-fluid">
-        <div class="col-md-4">
-            <h4>Monitor hours</h4>
-            <p>
-                Go in to the punchcard and check, edit, and delete employee hours.
-            </p>
-            <p><a class="btn btn-default" href="">Punchcard &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h4>Manage the Managers</h4>
-            <p>Your legion of workers is only as strong as the drones that control it. Appoint, sack, and edit them here!</p>
-            <p><a class="btn btn-default" href="@Url.Action("ManagersMain", "Managers")">Micro-manage &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h4>Google</h4>
-            <p>This one is just for debugging and the button will take you to Google!</p>
-            <p><a class="btn btn-default" href="http://google.com">Go to Google &raquo;</a></p>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span8 responsive" data-tablet="span12 fix-margin" data-desktop="span8">
-            <div class="widget">
-                <div class="widget-title">
-                    <h4><i class="fa fa-calendar fa-fw"></i> Schedule</h4>
+
+<div id="page">
+    <!--Begin page header-->
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h3 class="page-title">PunchCard <small>Welcome, ! Click on the buttons to your left to get started!</small></h3>
                 </div>
-                <div class="widget-body">
-                    <div id="calendar" class="has-toolbar"></div>
+            </div>
+            <!--End page header-->
+            <div id="page" class="dashboard">
+                <div class="row-fluid">
+                    <div class="col-md-4">
+                        <h4>Monitor hours</h4>
+                        <p>
+                            Go in to the punchcard and check, edit, and delete employee hours.
+                        </p>
+                        <p><a class="btn btn-default" href="">Punchcard &raquo;</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Manage the Managers</h4>
+                        <p>Your legion of workers is only as strong as the drones that control it. Appoint, sack, and edit them here!</p>
+                        <p><a class="btn btn-default" href="@Url.Action("ManagersMain", "Managers")">Micro-manage &raquo;</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Google</h4>
+                        <p>This one is just for debugging and the button will take you to Google!</p>
+                        <p><a class="btn btn-default" href="http://google.com">Go to Google &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span8 responsive" data-tablet="span12 fix-margin" data-desktop="span8">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h4><i class="fa fa-calendar fa-fw"></i> Schedule</h4>
+                            </div>
+                            <div class="widget-body">
+                                <div id="calendar" class="has-toolbar"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

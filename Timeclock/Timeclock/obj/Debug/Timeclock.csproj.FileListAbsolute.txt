@@ -52,3 +52,4 @@ C:\Users\Dell\Documents\GitHub\PunchCard\Timeclock\Timeclock\bin\Microsoft.Owin.
 C:\Users\Dell\Documents\GitHub\PunchCard\Timeclock\Timeclock\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Dell\Documents\GitHub\PunchCard\Timeclock\Timeclock\obj\Debug\Timeclock.dll
 C:\Users\Dell\Documents\GitHub\PunchCard\Timeclock\Timeclock\obj\Debug\Timeclock.pdb
+C:\Users\Dell\Documents\GitHub\PunchCard\Timeclock\Timeclock\obj\Debug\Timeclock.csprojResolveAssemblyReference.cache

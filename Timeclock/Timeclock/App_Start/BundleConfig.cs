@@ -26,15 +26,20 @@ namespace Timeclock
                       "~/Scripts/jquery.cookie.js",
                       "~/Scripts/jquery-ui-1.9.2.custom.min.js",
                       "~/Scripts/slimScroll.min.js",
-                      "~/Scripts/jquery-1.8.2.min.js"
+                      "~/Scripts/jquery-1.8.2.min.js",
+                      "~/Scripts/fullcalendar.min.js",
+                      "~/Scripts/jquery.uniform.min.js",
+                      "~/Scripts/chosen.jquery.min.js",
+                      "~/Scripts/jquery.fancybox.pack.js",
+                      "~/Scripts/app.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/calendar").Include(
-                    "~/Scripts/fullcalendar.min.js",
-                    "~/Scripts/jquery.uniform.min.js",
-                    "~/Scripts/chosen.jquery.min.js",
-                    "~/Scripts/jquery.fancybox.pack.js",
-                    "~/Scripts/app.js"
+                    //"~/Scripts/fullcalendar.min.js",
+                    //"~/Scripts/jquery.uniform.min.js",
+                    //"~/Scripts/chosen.jquery.min.js",
+                    //"~/Scripts/jquery.fancybox.pack.js",
+                    //"~/Scripts/app.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -42,7 +47,7 @@ namespace Timeclock
                     "~/Content/bootstrap-responsive.css",
                     "~/Content/Calendar/bootstrap-fullcalendar.css",
                     "~/Content/bootstrap.css",
-                    "~/Content/site.css",
+                    //"~/Content/site.css",
                     "~/Content/style.css",
                     "~/Content/style_responsive.css",
                     "~/Content/style_default.css",

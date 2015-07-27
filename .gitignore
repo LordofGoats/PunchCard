@@ -195,3 +195,6 @@ FakesAssemblies/
 *.opt
 Timeclock/Timeclock.v12.suo
 *.dll
+*.pdb
+*.dll
+*.suo

@@ -1,159 +1,254 @@
 ﻿@model IEnumerable<Timeclock.Models.Company>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Your Company";
 }
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title">@Html.DisplayNameFor(model => model.CompanyName) <small>Here you can view and change your company!</small></h3>
+        </div>
+    </div>
+    <ul class="breadcrumb">
+        <li>
+            <i class="icon-home"></i>
+            <a href="@Url.Action("Index", "Home")">Home</a> <span class="divider">/</span>
+        </li>
+        <li><a href="#">Company</a></li>
+    </ul>
+    <div id="page">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="widget">
+                    <div class="widget-title">
+                        <h4>Company Information</h4>
+                    </div>
+                    <div class="widget-body">
+                        <div class="tabbable portlet-tabs">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a href="#portlet_tab3" data-toggle="tab">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#portlet_tab2" data-toggle="tab">Address</a>
+                                </li>
+                                <li>
+                                    <a href="#portlet_tab1" data-toggle="tab">Info</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="portlet_tab1">
+                                    <p>
+                                        <ul>
+                                            <li>Company: @Html.DisplayNameFor(model => model.CompanyName)</li>
+                                            <li>Description: @Html.DisplayNameFor(model => model.CompanyNotes)</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="portlet_tab2">
+                                    <p>
+                                        Address: @Html.DisplayNameFor(model => model.CompanyAddress1) <br />
+                                        City: @Html.DisplayNameFor(model => model.City) State: @Html.DisplayNameFor(model => model.CompanyState)<br />
+                                        Zipcode: @Html.DisplayNameFor(model => model.CompanyZip) Country: @Html.DisplayNameFor(model => model.CompanyCountry)
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="portlet_tab3">
+                                    <p>
+                                        Contact Name: @Html.DisplayNameFor(model => model.ContactName) <br />
+                                        Email: @Html.DisplayNameFor(model => model.CompanyEmail)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="widget">
+                    <div class="widget-title">
+                        <h4>Billing Information</h4>
+                    </div>
+                    <div class="widget-body">
+                        <div class="tabbable portlet-tabs">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a href="#portlet_tab5" data-toggle="tab">Billing Info</a>
+                                </li>
+                                <li>
+                                    <a href="#portlet_tab4" data-toggle="tab">Basic</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="portlet_tab4">
+                                    <p>
+                                        <ul>
+                                            <li>Company: @Html.DisplayNameFor(model => model.CompanyName)</li>
+                                            <li>Description: @Html.DisplayNameFor(model => model.CompanyNotes)</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="portlet_tab5">
+                                    <p>
+                                        Billing Address: @Html.DisplayNameFor(model => model.BillingAddress1) <br />
+                                        City: @Html.DisplayNameFor(model => model.BillingCity) State: @Html.DisplayNameFor(model => model.BillingState)<br />
+                                        Zipcode: @Html.DisplayNameFor(model => model.BillingZip) Country: @Html.DisplayNameFor(model => model.BillingCountry)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-default" href="@Url.Action("Edit", "Companies")">Edit</a> 
+        </div>
+    </div>
+    @*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingContactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingEmail)
+            </th>
+            <th></th>
+        </tr>
 
-<h2>Index</h2>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyAddress1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyAddress2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyState)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyZip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyCountry)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyNotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingAddress1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingAddress2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingState)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingZip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingCountry)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingContactName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingNotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillingEmail)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyAddress1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyAddress2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyState)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyZip)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyCountry)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContactName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyNotes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingAddress1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingAddress2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingCity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingState)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingZip)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingCountry)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingContactName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingNotes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BillingEmail)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyAddress1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyAddress2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyState)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyZip)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyCountry)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyNotes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingAddress1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingAddress2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingCity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingState)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingZip)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingCountry)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingContactName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingNotes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BillingEmail)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>*@
+</div>

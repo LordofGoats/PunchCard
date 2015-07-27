@@ -26,7 +26,7 @@ namespace Timeclock
                       "~/Scripts/jquery.cookie.js",
                       "~/Scripts/jquery-ui-1.9.2.custom.min.js",
                       "~/Scripts/slimScroll.min.js",
-                      "~/Scripts/jquery-1.8.2.min.js",
+                      //"~/Scripts/jquery-1.8.2.min.js",
                       "~/Scripts/fullcalendar.min.js",
                       "~/Scripts/jquery.uniform.min.js",
                       "~/Scripts/chosen.jquery.min.js",
@@ -45,7 +45,7 @@ namespace Timeclock
             bundles.Add(new StyleBundle("~/Content/css").Include(
                     "~/Content/bootstrap.min.css",
                     "~/Content/bootstrap-responsive.css",
-                    "~/Content/Calendar/bootstrap-fullcalendar.css",
+                    "~/Content/bootstrap-fullcalendar.css",
                     "~/Content/bootstrap.css",
                     //"~/Content/site.css",
                     "~/Content/style.css",

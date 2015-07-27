@@ -26,5 +26,9 @@ namespace Timeclock.Models
         public bool RememberMeManager { get; set; }
         public bool RememberMeEmployee { get; set; }
 
+        public DateTime ShiftStart { get; set; }
+        public DateTime ShiftEnd { get; set; }
+        public string ShiftName { get; set; }
+
     }
 }

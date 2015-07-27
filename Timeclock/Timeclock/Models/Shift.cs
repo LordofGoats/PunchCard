@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Timeclock.Models
 {
-    public class Hours
+    public class Shift
     {
         [Key]
         public int Id { get; set; }

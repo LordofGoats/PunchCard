@@ -11,8 +11,11 @@ namespace Timeclock.Models
     {
         [Key]
         [Display(Name = "Manager Name")]
+        [Range(0, 50)]
         public string ManagerName { get; set; }
-        [Display(Name = "Title")]
+
+        [Display(Name = "Manager Title")]
+        [Range(0, 50)]
         public string ManagerTitle { get; set; }
     }
 }

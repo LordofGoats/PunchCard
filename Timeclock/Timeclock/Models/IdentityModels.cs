@@ -34,7 +34,7 @@ namespace Timeclock.Models
 
         public System.Data.Entity.DbSet<Timeclock.Models.Company> Companies { get; set; }
 
-        public System.Data.Entity.DbSet<Timeclock.Models.Hours> Hours { get; set; }
+        public System.Data.Entity.DbSet<Timeclock.Models.Shift> Hours { get; set; }
 
         public System.Data.Entity.DbSet<Timeclock.Models.Manager> Managers { get; set; }
 

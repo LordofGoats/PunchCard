@@ -4,14 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity.Core;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Timeclock.Models
 {
-    public class CompanyModel
+    public class Department
     {
-        [Key]
-        public string companyName { get; set; }
-        public int companyNumber { get; set; }
-        public string companyDescription { get; set; }
+        public int Id { get; set; }
+        public string DepartmentName { get; set; }
     }
 }

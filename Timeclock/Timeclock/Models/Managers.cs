@@ -7,12 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Timeclock.Models
 {
-    public class ManagersModel
+    public class Manager
     {
         [Key]
         [Display(Name = "Manager Name")]
-        public string managerName { get; set; }
+        public string ManagerName { get; set; }
         [Display(Name = "Title")]
-        public string managerTitle { get; set; }
+        public string ManagerTitle { get; set; }
     }
 }

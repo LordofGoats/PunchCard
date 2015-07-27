@@ -30,12 +30,16 @@ namespace Timeclock.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Timeclock.Models.EmployeeModel> Employees { get; set; }
+        public System.Data.Entity.DbSet<Timeclock.Models.Employee> Employees { get; set; }
 
-        public System.Data.Entity.DbSet<Timeclock.Models.CompanyModel> CompanyModels { get; set; }
+        public System.Data.Entity.DbSet<Timeclock.Models.Company> Companies { get; set; }
 
-        public System.Data.Entity.DbSet<Timeclock.Models.HoursModel> HoursModels { get; set; }
+        public System.Data.Entity.DbSet<Timeclock.Models.Hours> Hours { get; set; }
 
-        public System.Data.Entity.DbSet<Timeclock.Models.ManagersModel> ManagersModels { get; set; }
+        public System.Data.Entity.DbSet<Timeclock.Models.Manager> Managers { get; set; }
+
+        public System.Data.Entity.DbSet<Timeclock.Models.Job> Jobs { get; set; }
+
+        public System.Data.Entity.DbSet<Timeclock.Models.Department> Departments { get; set; }
     }
 }

@@ -8,7 +8,6 @@
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/Calendar/css")
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     </head>
 <body class="fixed-top">
     <!--Begin top navbar-->
@@ -70,5 +69,12 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+    jQuery(document).ready(function () {
+        App.init();
+    });
+
+
+    </script>
 </body>
 </html>

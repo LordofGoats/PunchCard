@@ -193,3 +193,5 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+Timeclock/Timeclock.v12.suo
+*.dll

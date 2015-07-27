@@ -263,11 +263,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Employees\EmployeeMain.cshtml" />
-    <Content Include="Views\Company\Create.cshtml" />
-    <Content Include="Views\Company\Delete.cshtml" />
-    <Content Include="Views\Company\Details.cshtml" />
-    <Content Include="Views\Company\Edit.cshtml" />
-    <Content Include="Views\Company\CompanyMain.cshtml" />
     <Content Include="Views\Hours\Create.cshtml" />
     <Content Include="Views\Hours\Delete.cshtml" />
     <Content Include="Views\Hours\Details.cshtml" />

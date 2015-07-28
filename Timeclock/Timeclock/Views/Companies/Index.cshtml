@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
-            <h3 class="page-title">@Html.DisplayNameFor(model => model.CompanyName) <small>Here you can view and change your company!</small></h3>
+            <h3 class="page-title">@*@Html.DisplayFor(model => model.CompanyName)*@ <small>Here you can view and change your company!</small></h3>
         </div>
     </div>
     <ul class="breadcrumb">
@@ -39,23 +39,23 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="portlet_tab1">
                                     <p>
-                                        <ul>
-                                            <li>Company: @Html.DisplayNameFor(model => model.CompanyName)</li>
-                                            <li>Description: @Html.DisplayNameFor(model => model.CompanyNotes)</li>
-                                        </ul>
+                                        Company: @*@Html.DisplayFor(model => model.CompanyName)*@ <br />
+                                        Description: @*@Html.DisplayFor(model => model.CompanyNotes)*@
                                     </p>
                                 </div>
                                 <div class="tab-pane" id="portlet_tab2">
                                     <p>
-                                        Address: @Html.DisplayNameFor(model => model.CompanyAddress1) <br />
-                                        City: @Html.DisplayNameFor(model => model.City) State: @Html.DisplayNameFor(model => model.CompanyState)<br />
-                                        Zipcode: @Html.DisplayNameFor(model => model.CompanyZip) Country: @Html.DisplayNameFor(model => model.CompanyCountry)
+                                        Address: @*@Html.DisplayFor(model => model.CompanyAddress1)*@ <br />
+                                        City: @*@Html.DisplayFor(model => model.City)*@ <br />
+                                        State: @*@Html.DisplayFor(model => model.CompanyState)*@<br />
+                                        Zipcode: @*@Html.DisplayFor(model => model.CompanyZip)*@ <br />
+                                        Country: @*@Html.DisplayFor(model => model.CompanyCountry)*@
                                     </p>
                                 </div>
                                 <div class="tab-pane" id="portlet_tab3">
                                     <p>
-                                        Contact Name: @Html.DisplayNameFor(model => model.ContactName) <br />
-                                        Email: @Html.DisplayNameFor(model => model.CompanyEmail)
+                                        Contact Name: @*@Html.DisplayFor(model => model.ContactName)*@ <br />
+                                        Email: @*@Html.DisplayForFor(model => model.CompanyEmail)*@
                                     </p>
                                 </div>
                             </div>
@@ -81,17 +81,17 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="portlet_tab4">
                                     <p>
-                                        <ul>
-                                            <li>Company: @Html.DisplayNameFor(model => model.CompanyName)</li>
-                                            <li>Description: @Html.DisplayNameFor(model => model.CompanyNotes)</li>
-                                        </ul>
+                                        Company: @*@Html.DisplayFor(model => model.CompanyName)*@<br />
+                                        Description: @*@Html.DisplayFor(model => model.CompanyNotes)*@
                                     </p>
                                 </div>
                                 <div class="tab-pane" id="portlet_tab5">
                                     <p>
-                                        Billing Address: @Html.DisplayNameFor(model => model.BillingAddress1) <br />
-                                        City: @Html.DisplayNameFor(model => model.BillingCity) State: @Html.DisplayNameFor(model => model.BillingState)<br />
-                                        Zipcode: @Html.DisplayNameFor(model => model.BillingZip) Country: @Html.DisplayNameFor(model => model.BillingCountry)
+                                        Billing Address: @*@Html.DisplayFor(model => model.BillingAddress1)*@ <br />
+                                        City: @*@Html.DisplayFor(model => model.BillingCity)*@<br />
+                                        State: @*@Html.DisplayFor(model => model.BillingState)*@<br />
+                                        Zipcode: @*@Html.DisplayFor(model => model.BillingZip)*@ <br />
+                                        Country: @*@Html.DisplayFor(model => model.BillingCountry)*@
                                     </p>
                                 </div>
                             </div>
@@ -99,7 +99,8 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-default" href="@Url.Action("Edit", "Companies")">Edit</a> 
+            <a class="btn btn-default" href="@Url.Action("Edit", "Companies")">Edit</a>
+            <a class="btn btn-default" href="@Url.Action("Create", "Companies")">Create</a> 
         </div>
     </div>
     @*<table class="table">

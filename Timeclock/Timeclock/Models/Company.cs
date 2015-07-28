@@ -57,11 +57,13 @@ namespace Timeclock.Models
         [Phone]
         public string Phone { get; set; }
         
+        [Display(Name = "Company Description")]
         [StringLength(1000, ErrorMessage = "Company Description cannot be longer than 1000 characters.", MinimumLength = 0)]
         public string CompanyNotes { get; set; }
 
         [Required]
         [EmailAddress]
+        [Display(Name = "Company Email")]
         public string CompanyEmail { get; set; }
 
 
@@ -110,11 +112,13 @@ namespace Timeclock.Models
         [Phone]
         public string BillingPhone { get; set; }
 
+        [Display(Name = "Special Instructions")]
         [StringLength(1000, ErrorMessage = "Billing Notes cannot be longer than 1000 characters.", MinimumLength = 0)]
         public string BillingNotes { get; set; }
 
         [Required]
         [EmailAddress]
+        [Display(Name = "Billing Email")]
         public string BillingEmail { get; set; }
 
     }

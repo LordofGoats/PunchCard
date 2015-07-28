@@ -1,0 +1,170 @@
+﻿@model Timeclock.Models.Company
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title">Company Creation<small> Let there be light!</small></h3>
+        </div>
+    </div>
+    <ul class="breadcrumb">
+        <li>
+            <i class="icon-home"></i>
+            <a href="@Url.Action("Index", "Home")">Home</a> <span class="divider">/</span>
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Companies")">Company</a> <span class="divider">/</span>
+        </li>
+        <li>
+            <a href="#">Create</a>
+        </li>
+    </ul>
+    <h5>Billing Information</h5>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingName, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingName, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingAddress1, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingAddress1, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingAddress1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingAddress2, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingAddress2, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingAddress2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingCity, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingCity, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingCity, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingState, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingState, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingState, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingZip, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingZip, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingZip, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingCountry, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingCountry, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingCountry, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingContactName, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingContactName, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingContactName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingPhone, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingPhone, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingPhone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingNotes, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingNotes, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingNotes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input4">
+                    @Html.LabelFor(model => model.BillingEmail, htmlAttributes: new { @class = "  " })
+                </label>
+                <div class="controls">
+                    @Html.EditorFor(model => model.BillingEmail, new { htmlAttributes = new { @class = "span4" } })
+                    @Html.ValidationMessageFor(model => model.BillingEmail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @Html.Hidden("CompanyName", Request["CompanyName"])
+            @Html.Hidden("CompanyAddress1", Request["CompanyAddress1"])
+            @Html.Hidden("CompanyCity", Request["CompanyCity"])
+            @Html.Hidden("CompanyState", Request["CompanyState"])
+            @Html.Hidden("CompanyZip", Request["CompanyZip"])
+            @Html.Hidden("CompanyCountry", Request["CompanyCountry"])
+            @Html.Hidden("ContactName", Request["ContactName"])
+            @Html.Hidden("Phone", Request["Phone"])
+            @Html.Hidden("CompanyEmail", Request["CompanyEmail"])
+            @Html.Hidden("CompanyNotes", Request["CompanyNotes"])
+            <div class="control-group">
+                <div class="span5">
+                    <input type="submit" value="Create" class="btn btn-default pull-right" formaction="@Url.Action("Index", "Companies")" />
+                </div>
+            </div>
+        </div>
+        
+
+
+    }
+</div>
+<div>
+    
+</div>
+<script src="~/Scripts/wysihtml5-0.3.0.js"></script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval") }
